@@ -7,7 +7,7 @@ public class SerialPortCustom
 {
     private const byte START_OF_PACKET = 0xAA;
     private const int HEADER_LENGTH = 14;
-    private const int MAX_PACKET_SIZE = short.MaxValue + 14 + 2; //data + header + data_checksum
+    private const int MAX_PACKET_SIZE = ushort.MaxValue + 14 + 2; //data + header + data_checksum
     private readonly SerialPort _serialPort;
     private byte[] _buffer = new byte[MAX_PACKET_SIZE * 2];
 
